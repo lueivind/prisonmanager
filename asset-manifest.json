@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/prisonmanager/static/css/main.de2e86a0.chunk.css",
-    "main.js": "/prisonmanager/static/js/main.fee7d8df.chunk.js",
-    "main.js.map": "/prisonmanager/static/js/main.fee7d8df.chunk.js.map",
+    "main.css": "/prisonmanager/static/css/main.4bf77647.chunk.css",
+    "main.js": "/prisonmanager/static/js/main.1bbdcc24.chunk.js",
+    "main.js.map": "/prisonmanager/static/js/main.1bbdcc24.chunk.js.map",
     "runtime-main.js": "/prisonmanager/static/js/runtime-main.9ada1482.js",
     "runtime-main.js.map": "/prisonmanager/static/js/runtime-main.9ada1482.js.map",
     "static/js/2.929ccf98.chunk.js": "/prisonmanager/static/js/2.929ccf98.chunk.js",
     "static/js/2.929ccf98.chunk.js.map": "/prisonmanager/static/js/2.929ccf98.chunk.js.map",
     "index.html": "/prisonmanager/index.html",
-    "static/css/main.de2e86a0.chunk.css.map": "/prisonmanager/static/css/main.de2e86a0.chunk.css.map",
+    "static/css/main.4bf77647.chunk.css.map": "/prisonmanager/static/css/main.4bf77647.chunk.css.map",
     "static/js/2.929ccf98.chunk.js.LICENSE.txt": "/prisonmanager/static/js/2.929ccf98.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.9ada1482.js",
     "static/js/2.929ccf98.chunk.js",
-    "static/css/main.de2e86a0.chunk.css",
-    "static/js/main.fee7d8df.chunk.js"
+    "static/css/main.4bf77647.chunk.css",
+    "static/js/main.1bbdcc24.chunk.js"
   ]
 }
