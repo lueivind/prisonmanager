@@ -2,11 +2,13 @@
   "name": "prison-manager",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://lueivind.github.io/prisonmanager",
   "dependencies": {
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "flickity": "^2.2.2",
+    "gh-pages": "^3.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-flickity-component": "^3.6.1",
@@ -14,6 +16,7 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
+    "deploy": "npm run build&&gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

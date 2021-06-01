@@ -24,12 +24,12 @@ export default class Prisoner extends Component {
                         <div></div>
                     </div>
                     {/* Number */}
-                    <h4 className="prisoner-number engraved">{number}</h4>
+                    <h4 className="prisoner-number glow">{number}</h4>
                     {/* Name */}
                     <h2>{name}</h2>
                     {/* Rehabilitation Status */}
-                    <label>Rehabilitated:</label>
-                    {this.state.rehabilitated ? (<label>True</label>) : (<label>False</label>)}
+                    {/* <label>Rehabilitated:</label>
+                    {this.state.rehabilitated ? (<label>True</label>) : (<label>False</label>)} */}
                 </div>
             </div>
         )
