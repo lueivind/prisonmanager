@@ -1,0 +1,11 @@
+Resources:
+
+Flickity:
+https://css-tricks.com/creating-responsive-touch-friendly-carousels-with-flickity/
+
+Flickity React:
+https://www.npmjs.com/package/react-flickity-component
+https://codesandbox.io/s/qlz12m4oj6
+
+React Carousel:
+https://codepen.io/andyNroses/pen/KaENLb
