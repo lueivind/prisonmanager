@@ -22,7 +22,7 @@ export default class Prisoners extends Component {
         const noun = Names.noun;
 
         // Generate dummy prisoners
-        let numberOfPrisoners = 20;
+        let numberOfPrisoners = 50;
         const dummyPrisoners = [];
         for (let index = 0; index < numberOfPrisoners; index++) {
 

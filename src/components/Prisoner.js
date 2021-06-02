@@ -15,16 +15,15 @@ export default class Prisoner extends Component {
         // Render Prisoner
         return (
             <div className="prison-door">
-                <div>
-                    <div className="prison-grate">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
+                <div className="prison-door-inner-border">
                     {/* Number */}
                     <h4 className="prisoner-number glow">{number}</h4>
+                    {/* <div className="prison-grate">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div> */}
                     {/* Name */}
                     <h2>{name}</h2>
                     {/* Rehabilitation Status */}

@@ -1,13 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Black+Ops+One&family=Changa:wght@200&family=Luckiest+Guy&family=Orelega+One&family=PT+Sans&family=Paytone+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap');
+
 
 :root {
-  --box-shadow: 1px 1px 5px rgba(0, 119, 255, 0.4), 0 1px 2px rgba(0, 31, 204, 0.5);
+  --box-shadow-blue: 0px 0px 5px #0077ff99, 0 0px 2px rgba(0, 31, 204, 0.8);
+  --box-shadow-blue-selected: 
+      1px 1px 5px #dbecff,
+      -1px -1px 5px #91c4ff,
+      0px 0px 5px #0077ff99,
+      0px 0px 10px #0077ff99,
+      0px 0px 15px #0077ff99,
+      0px 0px 20px #0077ff99;
+
+  --neon-border-color: #0077ff99;
+
+  --box-shadow-white: 1px 1px 5px rgba(255, 255, 255, 0.4), 0 1px 2px rgba(255, 255, 255, 0.5);
+
+
+  
   }
 
 body{
-  background-color: #000a16;
-  font-family: 'PT Sans', sans-serif;
-  color: #a8afc9;
+  background-color: #242b36;
+  font-family: 'Kanit', sans-serif;
+  color: #bdc2d4;
 }
 
 .container {
@@ -16,21 +32,36 @@ body{
 }
 
 .prison-door {
-    background-color: black;
-    color: #b1b1b1;
+    background-color: #000307;
     border-radius: 20px 20px 0px 0px;
-    box-shadow: var(--box-shadow);
-    padding: 20px;
     display: flex;
     justify-content: space-between;
     margin: 5px 10px 0px 10px;
     height: 250px;
     width: 200px;
+
+    box-shadow: var(--box-shadow-blue);
+
+    --text-shadow-prison-number: none;
+    --prison-number-color: #006deb88;
+  }
+
+  .prison-door.is-selected  {
+    --text-shadow-prison-number: 0px 0px 40px #006debff, 0px 0px 20px #006debcc, 0px 0px 5px #006deb88;
+    --prison-number-color: #006debff;
+    box-shadow: var(--box-shadow-blue-selected);
   }
 
   .prison-door > div {
     flex: 1;
     text-align: center;
+  }
+
+  .prison-door-inner-border{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow-blue);
   }
   
   .prison-grate{
@@ -67,7 +98,7 @@ body{
  }
 
  .glow{
-   text-shadow: 0px 0px 40px #006debff, 0px 0px 20px #006debcc, 0px 0px 5px #006deb88;
-   color: #006deb;
+   text-shadow: var(--text-shadow-prison-number);
+   color: var(--prison-number-color);
  }
 
