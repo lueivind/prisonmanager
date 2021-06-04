@@ -4,13 +4,13 @@ import Names from "../Names.json"
 
 import Flickity from 'react-flickity-component'
 import "./flickity.css"
-import "./Prisoners.css"
-
 
 import Prisoner from "./Prisoner"
 
 const flickityOptions = {
-    initialIndex: 2
+    initialIndex: 0,
+    freeScroll: true,
+    wrapAround: true
 }
 
 export default class Prisoners extends Component {
