@@ -28,25 +28,41 @@ body{
     width: 100%;
 }
 
+.test{
+    /* box-shadow: 0px 0px 5px white; */
+
+}
+
 .prison-door {
-    background-color: #000307;
-    border-radius: 20px 20px 0px 0px;
+
+  margin: 20px 10px 0px 10px;
+  border-radius: 20px 20px 0px 0px;
+      background-color: #000307;
     display: flex;
-    justify-content: space-between;
-    margin: 5px 10px 0px 10px;
-    height: 250px;
+    /* justify-content: space-between; */
+    height: 270px;
     width: 200px;
 
     /* Major performance reduction -->  */
     /* box-shadow: var(--box-shadow-blue); */
+
+
 
     --text-shadow-prison-number: none;
     --prison-number-color: #006deb88;
   }
 
   .prison-door.is-selected  {
-    --text-shadow-prison-number: 0px 0px 40px #006debff, 0px 0px 20px #006debcc, 0px 0px 5px #006deb88;
-    --prison-number-color: #006debff;
+    /* --text-shadow-prison-number: 0px 0px 40px #006debff, 0px 0px 20px #006debcc, 0px 0px 5px #006deb88; */
+    --text-shadow-prison-number: 
+      0px 0px 5px #006debff,
+      0px 0px 10px #006debff,
+      0px 0px 15px #006debff,
+      0px 0px 25px #006debff,
+      0px 0px 35px #006debff,
+      0px 0px 50px #006debff,
+      0px 0px 70px #006debff;
+    --prison-number-color: rgb(218, 235, 255);
     box-shadow: var(--box-shadow-blue-selected);
   }
 

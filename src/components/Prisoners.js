@@ -9,8 +9,9 @@ import Prisoner from "./Prisoner"
 
 const flickityOptions = {
     initialIndex: 0,
-    freeScroll: true,
-    wrapAround: true
+    freeScroll: false,
+    wrapAround: true,
+    pageDots: false
 }
 
 export default class Prisoners extends Component {
