@@ -1,13 +1,12 @@
 import './App.css';
-import Prisoners from './components/Prisoners';
+import Prison from "./components/Prison"
 
 function App() {
   return (
     <div className="container">
-      <h1>Prison</h1>
-      <Prisoners></Prisoners>
+      <Prison></Prison>
     </div>
-  );
+  )
 }
 
 export default App;

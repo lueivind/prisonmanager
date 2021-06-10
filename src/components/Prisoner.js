@@ -8,6 +8,10 @@ export default class Prisoner extends Component {
         this.state = { rehabilitated: false };
     }
 
+    onDoorClick = () => {
+        this.props.onChildClick(this.props.prisoner.key);
+    }
+
     render() {
         // desconstruct from props
         const { name, number } = this.props.prisoner
@@ -16,20 +20,9 @@ export default class Prisoner extends Component {
         return (
 
             <div className="prison-door">
-                <div className="prison-door-inner-border">
-                    {/* Number */}
-                    <h4 className="prisoner-number glow">{number}</h4>
-                    {/* <div className="prison-grate">
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                            </div> */}
-                    {/* Name */}
+                <div className="prison-door-inner-border" >
+                    <h4 className="prisoner-number glow" onClick={this.onDoorClick}>{number}</h4>
                     <h2>{name}</h2>
-                    {/* Rehabilitation Status */}
-                    {/* <label>Rehabilitated:</label>
-                            {this.state.rehabilitated ? (<label>True</label>) : (<label>False</label>)} */}
                 </div>
             </div>
 
