@@ -41,7 +41,7 @@ export default class Prisoners extends Component {
         }
 
         return (
-            <div>
+            <div style={{ padding: "0 0 1em 0" }}>
                 <Flickity flickityRef={(f) => this.flickity = f}
                     className={'carousel'} // default ''
                     elementType={'div'} // default 'div'
