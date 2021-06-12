@@ -17,7 +17,7 @@ export default class Prison extends Component {
         const tools = Names.toolsDefinitive;
 
         // Generate dummy prisoners
-        let numberOfPrisoners = 20;
+        let numberOfPrisoners = 30;
         let maxNumberOfCrimes = 3;
         let minNumberOfCrimes = 1;
         const dummyPrisoners = [];
@@ -76,11 +76,11 @@ export default class Prison extends Component {
         return (
             <div>
                 <h1>Prison</h1>
-                <hr />
+                <hr className="hr-2" />
                 <Prisoners
                     prisoners={this.state.prisoners}
                     onSelectionChanged={this.selectionChanged.bind(this)}></Prisoners>
-                <hr />
+                <hr className="hr-2" />
                 <h1>Prisoner Details</h1>
                 <PrisonerDetails
                     prisoners={this.state.prisoners}

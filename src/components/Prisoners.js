@@ -6,7 +6,7 @@ import "./flickity.css"
 import Prisoner from "./Prisoner"
 
 const flickityOptions = {
-    initialIndex: 0,
+    initialIndex: 15,
     freeScroll: false,
     wrapAround: true,
     pageDots: false

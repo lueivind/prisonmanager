@@ -22,7 +22,7 @@ export default class Prisoner extends Component {
             <div className="prison-door">
                 <div className="prison-door-inner-border" >
                     <h4 className="prisoner-number glow" onClick={this.onDoorClick}>{number}</h4>
-                    <h2>{name}</h2>
+                    <h2 className="prisoner-name">{name}</h2>
                 </div>
             </div>
 
