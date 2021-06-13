@@ -75,7 +75,7 @@ export default class Prison extends Component {
     render() {
         return (
             <div>
-                <h1>Prison</h1>
+                <h1 style={{ marginTop: "0.1em" }}>Prison</h1>
                 <hr className="hr-2" />
                 <Prisoners
                     prisoners={this.state.prisoners}
@@ -86,7 +86,7 @@ export default class Prison extends Component {
                     prisoners={this.state.prisoners}
                     selectedPrisoner={this.state.selectedPrisoner}
                 ></PrisonerDetails>
-            </div>
+            </div >
         )
     }
 }

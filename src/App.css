@@ -82,6 +82,10 @@ body{
     box-shadow: var(--box-shadow-blue-selected);
   }
 
+  h1{
+    margin-left: 0.1em;
+  }
+
   .glow{
     text-shadow: var(--text-shadow-prison-number);
     color: var(--prison-number-color);
@@ -143,7 +147,7 @@ body{
  
  .details-container{
    margin: auto;
-  border-radius: 20px 20px 0px 0px;
+  border-radius: 20px;
   background-color: var(--background-dark);
   display: flex;
   /* justify-content: space-between; */
@@ -171,7 +175,7 @@ body{
   align-items: flex-start;
   box-sizing: border-box;
 
-  padding: 2vw;
+padding: 10px;
 
   border-left-width: 1px;
   border-right-width: 0px;
@@ -245,23 +249,18 @@ body{
   border-image: 
     linear-gradient(to bottom, rgba(0, 0, 0, 0), var(--foreground-blue), rgba(0, 0, 0, 0)) 1 100%; */
 
-  animation: opacity-pulse 2s alternate infinite;
-  animation-timing-function: ease-in-out;
+  /* animation: opacity-pulse 2s alternate infinite;
+  animation-timing-function: ease-in-out; */
  }
 
- .photo-frame{
-
- }
-
- @keyframes opacity-pulse{
+ /* @keyframes opacity-pulse{
    0%{
      opacity: 40%;
    }
    100%{
      opacity: 100%;
    }
- }
-
+ } */
 
  .hr-1{
  
