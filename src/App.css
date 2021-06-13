@@ -17,9 +17,15 @@
   --box-shadow-white: 1px 1px 5px rgba(255, 255, 255, 0.4), 0 1px 2px rgba(255, 255, 255, 0.5);
 
   --background-dark: #000307;
-  --forebround-blue: #74b5ff;
-  --forebround-light-blue: #b7d9ff;
-  --forebround-blue-faded: #006deb88;
+  --foreground-blue: #74b5ff;
+  --foreground-light-blue: #b7d9ff;
+  --foreground-blue-faded: #006deb88;
+  --foreground-light: #bdc2d4;
+
+  
+  --font-size-small: 18px;
+  --font-size-regular: 24px;
+  --font-size-large: 30px;
 
   }
 
@@ -47,12 +53,14 @@ body{
     height: 270px;
     width: 13em;
 
+    background-image: url("./resources/photostop/door-tiles-45.png");
+
     /* Major performance reduction -->  */
     /* box-shadow: var(--box-shadow-blue); */
 
     --text-shadow-prison-number: none;
-    --prison-number-color: var(--forebround-blue-faded);
-    --prison-number-color-hover: var(--forebround-blue);
+    --prison-number-color: var(--foreground-blue-faded);
+    --prison-number-color-hover: var(--foreground-blue);
   }
 
   .prisoner-name{
@@ -95,6 +103,7 @@ body{
     border-radius: 10px;
     box-shadow: var(--box-shadow-blue);
     width: 100%;
+    
   }
   
   .prison-grate{
@@ -138,8 +147,12 @@ body{
   background-color: var(--background-dark);
   display: flex;
   /* justify-content: space-between; */
-  width: 50%;
-  color: var(--forebround-blue);
+  width: 85%;
+  max-width: 500px;
+  color: var(--foreground-blue);
+  
+  background-image: url("./resources/photostop/door-tiles-45.png");
+  
 
  }
 
@@ -157,16 +170,41 @@ body{
   flex-wrap: wrap;
   align-items: flex-start;
   box-sizing: border-box;
- }
 
- .picture-background{
-    background: var(--forebround-blue-faded);
-    padding: 0.5em;
+  padding: 2vw;
+
+  border-left-width: 1px;
+  border-right-width: 0px;
+  border-top-width: 3px;
+  border-style: solid;
+  border-image: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0), var(--foreground-blue), rgba(0, 0, 0, 0)) 1 100%;
+
  }
 
  .flex{
    display: flex;
  }
+
+ /*** TEXT ***/
+
+ .text-center{
+   text-align: center;
+ }
+
+ .font-small{
+  font-size: var(--font-size-small);
+ }
+
+ .font-regular{
+   font-size: var(--font-size-regular);
+ }
+
+ .font-large{
+  font-size: var(--font-size-large);
+ }
+
+
 
  img{
   object-fit: contain;
@@ -174,6 +212,56 @@ body{
   margin: auto;
   display: flex;
  }
+
+ .detail{
+   color: var(--foreground-light);
+   font-size: var(--font-size-regular);
+   font-weight: bold;
+ }
+
+ .detail.list{
+  font-size: var(--font-size-small);
+  font-weight: normal;
+ }
+
+ .detail-description{
+  color: var(--foreground-blue);
+  font-size: var(--font-size-small);
+}
+
+ .photo{
+  background-image: url("./resources/photostop/wireframe_blue.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  /* position: relative; */
+  width: 100%;
+  /* height: 20vw; */
+  height: 200px;
+
+  /* border-left-width: 2px;
+  border-right-width: 2px;
+  border-style: solid;
+  border-image: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0), var(--foreground-blue), rgba(0, 0, 0, 0)) 1 100%; */
+
+  animation: opacity-pulse 2s alternate infinite;
+  animation-timing-function: ease-in-out;
+ }
+
+ .photo-frame{
+
+ }
+
+ @keyframes opacity-pulse{
+   0%{
+     opacity: 40%;
+   }
+   100%{
+     opacity: 100%;
+   }
+ }
+
 
  .hr-1{
  
@@ -192,7 +280,7 @@ body{
    0px 0px 15px #0077ff99;
 
   box-shadow: var(--box-shadow-hr-start);
-  border-color: var(--forebround-light-blue);
+  border-color: var(--foreground-light-blue);
   animation: pulse 2s infinite;
   /* animation-timing-function: cubic-bezier(0.82, 0.14, 0.74, 0.38); */
   animation-timing-function: linear;
@@ -201,21 +289,21 @@ body{
  @keyframes pulse {
    100%{
      box-shadow: none;
-    /* border-color: var(--forebround-blue-faded); */
+    /* border-color: var(--foreground-blue-faded); */
     opacity: 20%;
    }
  }
 
  .hr-2{
   border: 0;
-  height: 0.4em;
+  height: 0.3em;
   /* width: 200%; */
   /* background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); */
   --turn: 0;
   /* --start: 0%;
   --end: calc(var(--start) + 4%);
   --end: 5%; */
-  background: linear-gradient(to left, #b7d9ff00,#b7d9ff00, 48%, var(--forebround-blue) , 52%, #b7d9ff30, #b7d9ff20, #b7d9ff10, #b7d9ff00);
+  background: linear-gradient(to left, #b7d9ff00,#b7d9ff00, 48%, var(--foreground-blue) , 52%, #b7d9ff30, #b7d9ff20, #b7d9ff10, #b7d9ff00);
   background-size: 200%;
   background-position: 0% 0%;
   box-shadow:  

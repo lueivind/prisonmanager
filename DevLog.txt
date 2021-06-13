@@ -11,3 +11,6 @@ React Carousel:
 https://codepen.io/andyNroses/pen/KaENLb
 
 youtube --> React SVG
+
+To Do
+- Add rotating 3d robotic head wireframe
