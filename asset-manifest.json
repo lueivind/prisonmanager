@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/prisonmanager/static/css/main.5959c41f.chunk.css",
-    "main.js": "/prisonmanager/static/js/main.391b4038.chunk.js",
-    "main.js.map": "/prisonmanager/static/js/main.391b4038.chunk.js.map",
+    "main.css": "/prisonmanager/static/css/main.75f265db.chunk.css",
+    "main.js": "/prisonmanager/static/js/main.8d9badef.chunk.js",
+    "main.js.map": "/prisonmanager/static/js/main.8d9badef.chunk.js.map",
     "runtime-main.js": "/prisonmanager/static/js/runtime-main.9ada1482.js",
     "runtime-main.js.map": "/prisonmanager/static/js/runtime-main.9ada1482.js.map",
     "static/js/2.139f25a9.chunk.js": "/prisonmanager/static/js/2.139f25a9.chunk.js",
     "static/js/2.139f25a9.chunk.js.map": "/prisonmanager/static/js/2.139f25a9.chunk.js.map",
     "index.html": "/prisonmanager/index.html",
-    "static/css/main.5959c41f.chunk.css.map": "/prisonmanager/static/css/main.5959c41f.chunk.css.map",
+    "static/css/main.75f265db.chunk.css.map": "/prisonmanager/static/css/main.75f265db.chunk.css.map",
     "static/js/2.139f25a9.chunk.js.LICENSE.txt": "/prisonmanager/static/js/2.139f25a9.chunk.js.LICENSE.txt",
     "static/media/silouette.39555130.svg": "/prisonmanager/static/media/silouette.39555130.svg",
     "static/media/App.css": "/prisonmanager/static/media/wireframe_blue.e8022232.png"
@@ -16,7 +16,7 @@
   "entrypoints": [
     "static/js/runtime-main.9ada1482.js",
     "static/js/2.139f25a9.chunk.js",
-    "static/css/main.5959c41f.chunk.css",
-    "static/js/main.391b4038.chunk.js"
+    "static/css/main.75f265db.chunk.css",
+    "static/js/main.8d9badef.chunk.js"
   ]
 }
