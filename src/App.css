@@ -2,7 +2,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap');
 
 
+
 :root {
+
+  /* Colors  */
+  --background-dark: #000307;
+  --foreground-blue: #74b5ff;
+  --foreground-light-blue: #b7d9ff;
+  --foreground-light-blue-transparent: #b7d9ff00;
+  --foreground-blue-faded: #006deb88;
+  --foreground-light: #bdc2d4;
+  --foreground-light-faded: #bdc2d488;
+  --neon-border-color: #0077ff99;
+
+  /* Box Shadows */
   --box-shadow-blue: 0px 0px 5px #0077ff99, 0 0px 2px rgba(0, 31, 204, 0.8);
   --box-shadow-blue-selected: 
       1px 1px 5px #dbecff,
@@ -11,23 +24,18 @@
       0px 0px 10px #0077ff99,
       0px 0px 15px #0077ff99,
       0px 0px 20px #0077ff99;
-
-  --neon-border-color: #0077ff99;
-
   --box-shadow-white: 1px 1px 5px rgba(255, 255, 255, 0.4), 0 1px 2px rgba(255, 255, 255, 0.5);
 
-  --background-dark: #000307;
-  --foreground-blue: #74b5ff;
-  --foreground-light-blue: #b7d9ff;
-  --foreground-blue-faded: #006deb88;
-  --foreground-light: #bdc2d4;
-
-  
+  /* Text */
   --font-size-small: 18px;
   --font-size-regular: 24px;
   --font-size-large: 30px;
 
   }
+
+/* ===================== 
+        ELEMENTS
+======================== */ 
 
 body{
   /* background-color: #242b36; */
@@ -37,6 +45,75 @@ body{
   margin: 0;
   background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
 }
+
+h1{
+  margin-left: 0.1em;
+}
+
+
+img{
+  object-fit: contain;
+  width: 50%;
+  margin: auto;
+  display: flex;
+ }
+
+
+/* ===================== 
+        SINGLES
+======================== */ 
+
+.flex{
+  display: flex;
+}
+
+.inline-flex{
+  display: inline-flex;
+}
+
+.center{
+  margin: auto;
+}
+
+/* ===================== 
+        TEXT
+======================== */ 
+
+ .text-center{
+  text-align: center;
+}
+
+.font-small{
+ font-size: var(--font-size-small);
+}
+
+.font-regular{
+  font-size: var(--font-size-regular);
+}
+
+.font-large{
+ font-size: var(--font-size-large);
+}
+
+/* ===================== 
+        COLORS
+======================== */ 
+.fg-light{
+  color: var(--foreground-light)
+}
+.fg-light-faded{
+  color: var(--foreground-light-faded)
+}
+.fg-blue{
+  color: var(--foreground-blue)
+}
+.fg-blue-faded{
+  color: var(--foreground-blue-faded)
+}
+
+/* ===================== 
+        LAYOUT
+======================== */ 
 
 .container {
     margin: auto;
@@ -63,8 +140,9 @@ body{
     --prison-number-color-hover: var(--foreground-blue);
   }
 
-  .prisoner-name{
-    font-size: 24px;
+  .prison-door > div {
+    flex: 1;
+    text-align: center;
   }
 
   .prison-door.is-selected  {
@@ -82,8 +160,17 @@ body{
     box-shadow: var(--box-shadow-blue-selected);
   }
 
-  h1{
-    margin-left: 0.1em;
+  .prison-door-inner-border{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow-blue);
+    width: 100%;
+    
+  }
+
+  .prisoner-name{
+    font-size: 24px;
   }
 
   .glow{
@@ -96,83 +183,37 @@ body{
     cursor: pointer;
   }
 
-  .prison-door > div {
-    flex: 1;
-    text-align: center;
-  }
-
-  .prison-door-inner-border{
-    margin: 10px;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: var(--box-shadow-blue);
-    width: 100%;
-    
-  }
-  
-  .prison-grate{
-    margin: 20px 10% 0 10%;
-    height: 80px;
-    border-radius: 10px;
-    background-color: #343434;
-  }
-
-  .prison-grate > div{
-    box-sizing: border-box;
-    background-color: #aaaacc;
-    height: 100%;
-    width: 7%;
-    margin: 0 10px;
-    display: inline-block;
-    border-right: 2px solid white;
-    border-left: 2px solid gray;
-  }
-
   .prisoner-number{
     font-family: 'Changa', sans-serif;
     font-size: 30px;
     margin: 10px 30px;
   }
 
-
-
-  .engraved {
-    background-color: black;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    text-shadow: rgba(200,200,200,0.9) -1px 1px 1px;
- }
- 
  .details-container{
    margin: auto;
+   margin-top: 20px;
   border-radius: 20px;
   background-color: var(--background-dark);
   display: flex;
-  /* justify-content: space-between; */
   width: 85%;
   max-width: 500px;
   color: var(--foreground-blue);
-  
   background-image: url("./resources/photostop/door-tiles-45.png");
-  
 
  }
 
  .left-container{
-  flex: 0 1 50%;
+  flex: 0 1 40%;
   min-height: 100%;
-  max-width: 50%;
+  max-width: 40%;
  }
 
  .right-container{
-  flex: 0 1 50%;
+  flex: 0 1 60%;
   display: flex;
   height: 100%;
-  max-width: 50%;
-  flex-wrap: wrap;
-  align-items: flex-start;
+  max-width: 60%;
+  align-items: flex-end;
   box-sizing: border-box;
 
 padding: 10px;
@@ -183,38 +224,6 @@ padding: 10px;
   border-style: solid;
   border-image: 
     linear-gradient(to bottom, rgba(0, 0, 0, 0), var(--foreground-blue), rgba(0, 0, 0, 0)) 1 100%;
-
- }
-
- .flex{
-   display: flex;
- }
-
- /*** TEXT ***/
-
- .text-center{
-   text-align: center;
- }
-
- .font-small{
-  font-size: var(--font-size-small);
- }
-
- .font-regular{
-   font-size: var(--font-size-regular);
- }
-
- .font-large{
-  font-size: var(--font-size-large);
- }
-
-
-
- img{
-  object-fit: contain;
-  width: 50%;
-  margin: auto;
-  display: flex;
  }
 
  .detail{
@@ -236,12 +245,13 @@ padding: 10px;
  .photo{
   background-image: url("./resources/photostop/wireframe_blue.png");
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  /* position: relative; */
-  width: 100%;
+  background-position: bottom;
+  background-size: contain; 
+  /* position: relative;
   /* height: 20vw; */
-  height: 200px;
+  height: 100%;
+  flex:2;
+  margin: 0px 10px;
 
   /* border-left-width: 2px;
   border-right-width: 2px;
@@ -253,6 +263,98 @@ padding: 10px;
   animation-timing-function: ease-in-out; */
  }
 
+ .numerics{
+  font-family: 'Changa', sans-serif;
+  font-weight: bold;
+  font-size: var(--font-size-small);
+ }
+
+ .bar-graph{
+   display: flex;
+   align-items: flex-end;
+   height: 130px;
+ }
+
+ .bar{
+  background: var(--foreground-blue-faded);
+  margin: 5px;
+  height: 100px;
+  width: 10px;
+ }
+
+ .b1{
+   width: 10px;
+   animation: bar1 1.4s alternate infinite;
+   animation-timing-function: linear;
+ }
+
+ .b2{
+  width: 10px;
+  animation: bar2 1s alternate infinite;
+  animation-timing-function: linear;
+
+}
+
+.b3{
+  width: 10px;
+  animation: bar3 1.8s alternate infinite;
+}
+
+.b4{
+  width: 10px;
+  animation: bar4 0.8s alternate infinite;
+  animation-timing-function: linear;
+}
+
+.b5{
+  width: 10px;
+  animation: bar5 0.4s alternate infinite;
+  animation-timing-function: linear;
+}
+
+
+@keyframes bar1{
+  0%{
+    height: 10px;
+  }
+  100%{
+    height: 90px;
+  }
+}
+@keyframes bar2{
+  0%{
+    height: 50px;
+  }
+  100%{
+    height: 115px;
+  }
+}
+@keyframes bar3{
+  0%{
+    height: 0px;
+  }
+  100%{
+    height: 80px;
+  }
+}
+@keyframes bar4{
+  0%{
+    height: 30px;
+  }
+  100%{
+    height: 60px;
+  }
+}
+
+@keyframes bar5{
+  0%{
+    height: 30px;
+  }
+  100%{
+    height: 60px;
+  }
+}
+
  /* @keyframes opacity-pulse{
    0%{
      opacity: 40%;
@@ -263,7 +365,7 @@ padding: 10px;
  } */
 
  .hr-1{
- 
+
    --box-shadow-hr-start:
    0px 0px 2px #91c4ff,
    0px 0px 5px #0077ff99,
@@ -322,6 +424,226 @@ padding: 10px;
     background-position: -200% 0%;
   }
 }
+
+
+
+.marker{
+  border: none;
+  height: 2px;
+  background: linear-gradient(to left, #00000000,  var(--foreground-blue), #00000000);
+  animation: 1s infinite;
+  margin-bottom: 10px;
+  border-radius: 50%;
+}
+
+.marker.m1{
+
+  width: 50px;
+  animation-name: marker-opacity-1;
+}
+
+.marker.m2{
+  width: 20px;
+  animation-name: marker-opacity-2;
+}
+
+.marker.m3{
+  width: 20px;
+  animation-name: marker-opacity-3;
+}
+
+.marker.m4{
+  width: 20px;
+  animation-name: marker-opacity-4;
+}
+
+.marker.m5{
+  width: 20px;
+  animation-name: marker-opacity-5;
+}
+
+@keyframes marker-opacity-1{
+  0%{
+    opacity: 0%;
+  }
+  10%{
+    opacity: 0%;
+  }
+  20%{
+    opacity: 100%;
+  }
+  30%{
+    opacity: 100%;
+  }
+  40%{
+    opacity: 100%;
+  }
+  50%{
+    opacity: 100%;
+  }
+  60%{
+    opacity: 100%;
+  }
+  70%{
+    opacity: 100%;
+  }
+  80%{
+    opacity: 100%;
+  }
+  90%{
+    opacity: 100%;
+  }
+  100%{
+    opacity: 100%;
+  }
+}
+
+@keyframes marker-opacity-2{
+  0%{
+    opacity: 0%;
+  }
+  10%{
+    opacity: 0%;
+  }
+  20%{
+    opacity: 0%;
+  }
+  30%{
+    opacity: 0%;
+  }
+  40%{
+    opacity: 100%;
+  }
+  50%{
+    opacity: 100%;
+  }
+  60%{
+    opacity: 100%;
+  }
+  70%{
+    opacity: 100%;
+  }
+  80%{
+    opacity: 100%;
+  }
+  90%{
+    opacity: 100%;
+  }
+  100%{
+    opacity: 100%;
+  }
+}
+
+@keyframes marker-opacity-3{
+  0%{
+    opacity: 0%;
+  }
+  10%{
+    opacity: 0%;
+  }
+  20%{
+    opacity: 0%;
+  }
+  30%{
+    opacity: 0%;
+  }
+  40%{
+    opacity: 0%;
+  }
+  50%{
+    opacity: 0%;
+  }
+  60%{
+    opacity: 100%;
+  }
+  70%{
+    opacity: 100%;
+  }
+  80%{
+    opacity: 100%;
+  }
+  90%{
+    opacity: 100%;
+  }
+  100%{
+    opacity: 100%;
+  }
+}
+
+@keyframes marker-opacity-4{
+  0%{
+    opacity: 0%;
+  }
+  10%{
+    opacity: 0%;
+  }
+  20%{
+    opacity: 0%;
+  }
+  30%{
+    opacity: 0%;
+  }
+  40%{
+    opacity: 0%;
+  }
+  50%{
+    opacity: 0%;
+  }
+  60%{
+    opacity: 0%;
+  }
+  70%{
+    opacity: 0%;
+  }
+  80%{
+    opacity: 100%;
+  }
+  90%{
+    opacity: 100%;
+  }
+  100%{
+    opacity: 100%;
+  }
+}
+
+@keyframes marker-opacity-5{
+  0%{
+    opacity: 0%;
+  }
+  10%{
+    opacity: 0%;
+  }
+  20%{
+    opacity: 0%;
+  }
+  30%{
+    opacity: 0%;
+  }
+  40%{
+    opacity: 0%;
+  }
+  50%{
+    opacity: 0%;
+  }
+  60%{
+    opacity: 0%;
+  }
+  70%{
+    opacity: 0%;
+  }
+  80%{
+    opacity: 0%;
+  }
+  90%{
+    opacity: 0%;
+  }
+  100%{
+    opacity: 100%;
+  }
+}
+
+
+
 
 
 

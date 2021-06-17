@@ -14,6 +14,7 @@ const flickityOptions = {
 
 export default class Prisoners extends Component {
 
+
     componentDidMount() {
         this.flickity.on("change", () => {
             this.onSelectionChanged()
@@ -41,7 +42,7 @@ export default class Prisoners extends Component {
         }
 
         return (
-            <div style={{ padding: "0 0 1em 0" }}>
+            <div style={{ padding: "0 0 0.8em 0" }}>
                 <Flickity flickityRef={(f) => this.flickity = f}
                     className={'carousel'} // default ''
                     elementType={'div'} // default 'div'

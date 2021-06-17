@@ -18,7 +18,7 @@ export default class Prison extends Component {
 
         // Generate dummy prisoners
         let numberOfPrisoners = 30;
-        let maxNumberOfCrimes = 3;
+        let maxNumberOfCrimes = 5;
         let minNumberOfCrimes = 1;
         const dummyPrisoners = [];
         for (let index = 0; index < numberOfPrisoners; index++) {
@@ -81,11 +81,21 @@ export default class Prison extends Component {
                     prisoners={this.state.prisoners}
                     onSelectionChanged={this.selectionChanged.bind(this)}></Prisoners>
                 <hr className="hr-2" />
-                <h1>Prisoner Details</h1>
+                {/* <div>
+                    <hr className="marker m1 center"></hr>
+                    <hr className="marker m2 center"></hr>
+                    <hr className="marker m3 center"></hr>
+                    <hr className="marker m4 center"></hr>
+                    <hr className="marker m5 center"></hr>
+                </div> */}
+
                 <PrisonerDetails
                     prisoners={this.state.prisoners}
                     selectedPrisoner={this.state.selectedPrisoner}
                 ></PrisonerDetails>
+
+
+
             </div >
         )
     }
