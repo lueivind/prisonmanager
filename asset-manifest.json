@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/prisonmanager/static/css/main.bd791bdf.chunk.css",
-    "main.js": "/prisonmanager/static/js/main.507cac43.chunk.js",
-    "main.js.map": "/prisonmanager/static/js/main.507cac43.chunk.js.map",
+    "main.css": "/prisonmanager/static/css/main.f29d6636.chunk.css",
+    "main.js": "/prisonmanager/static/js/main.b5b976ff.chunk.js",
+    "main.js.map": "/prisonmanager/static/js/main.b5b976ff.chunk.js.map",
     "runtime-main.js": "/prisonmanager/static/js/runtime-main.9ada1482.js",
     "runtime-main.js.map": "/prisonmanager/static/js/runtime-main.9ada1482.js.map",
     "static/js/2.139f25a9.chunk.js": "/prisonmanager/static/js/2.139f25a9.chunk.js",
     "static/js/2.139f25a9.chunk.js.map": "/prisonmanager/static/js/2.139f25a9.chunk.js.map",
     "index.html": "/prisonmanager/index.html",
-    "static/css/main.bd791bdf.chunk.css.map": "/prisonmanager/static/css/main.bd791bdf.chunk.css.map",
+    "static/css/main.f29d6636.chunk.css.map": "/prisonmanager/static/css/main.f29d6636.chunk.css.map",
     "static/js/2.139f25a9.chunk.js.LICENSE.txt": "/prisonmanager/static/js/2.139f25a9.chunk.js.LICENSE.txt",
     "static/media/App.css": "/prisonmanager/static/media/wireframe_blue.e8022232.png"
   },
   "entrypoints": [
     "static/js/runtime-main.9ada1482.js",
     "static/js/2.139f25a9.chunk.js",
-    "static/css/main.bd791bdf.chunk.css",
-    "static/js/main.507cac43.chunk.js"
+    "static/css/main.f29d6636.chunk.css",
+    "static/js/main.b5b976ff.chunk.js"
   ]
 }
