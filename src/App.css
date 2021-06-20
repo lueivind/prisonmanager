@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Black+Ops+One&family=Changa:wght@200&family=Luckiest+Guy&family=Orelega+One&family=PT+Sans&family=Paytone+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&family=Monoton&family=Righteous&display=swap');
+
+
 
 
 :root {
@@ -9,6 +12,7 @@
   --background-dark: #000307;
   --foreground-blue: #74b5ff;
   --foreground-light-blue: #b7d9ff;
+  --foreground-verylight-blue: #dbecff;
   --foreground-light-blue-transparent: #b7d9ff00;
   --foreground-blue-faded: #006deb88;
   --foreground-light: #bdc2d4;
@@ -30,6 +34,8 @@
   --font-size-small: 18px;
   --font-size-regular: 24px;
   --font-size-large: 30px;
+  --font-size-very-large: 40px;
+  --font-size-super-large: 50px;
 
   }
 
@@ -83,17 +89,25 @@ img{
   text-align: center;
 }
 
-.font-small{
+.fs-s{
  font-size: var(--font-size-small);
 }
 
-.font-regular{
+.fs-m{
   font-size: var(--font-size-regular);
 }
 
-.font-large{
+.fs-l{
  font-size: var(--font-size-large);
 }
+
+.fs-xl{
+  font-size: var(--font-size-very-large);
+ }
+
+ .fs-xxl{
+  font-size: var(--font-size-super-large);
+ }
 
 /* ===================== 
         COLORS
@@ -140,6 +154,26 @@ img{
     --prison-number-color-hover: var(--foreground-blue);
   }
 
+  .prison-door-test {
+
+    margin: 1em 0.5em 0em 0.5em;
+    border-radius: 20px 20px 0px 0px;
+        background-color: var(--background-dark);
+      display: flex;
+      /* justify-content: space-between; */
+      height: 270px;
+      width: 13em;
+  
+      background-image: url("./resources/photostop/door-tiles-45.png");
+  
+      /* Major performance reduction -->  */
+      /* box-shadow: var(--box-shadow-blue); */
+  
+      --text-shadow-prison-number: none;
+      --prison-number-color: var(--foreground-blue-faded);
+      --prison-number-color-hover: var(--foreground-blue);
+    }
+
   .prison-door > div {
     flex: 1;
     text-align: center;
@@ -160,6 +194,21 @@ img{
     box-shadow: var(--box-shadow-blue-selected);
   }
 
+  .prison-door-test.is-selected  {
+    /* --text-shadow-prison-number: 
+      0px 0px 5px #006debff,
+      0px 0px 10px #006debff,
+      0px 0px 15px #006debff,
+      0px 0px 25px #006debff,
+      0px 0px 35px #006debff,
+      0px 0px 50px #006debff,
+      0px 0px 70px #006debff;
+    --prison-number-color: rgb(218, 235, 255);
+    --prison-number-color-hover: rgb(218, 235, 255);; */
+
+    box-shadow: var(--box-shadow-blue-selected);
+  }
+
   .prison-door-inner-border{
     margin: 10px;
     padding: 10px;
@@ -173,29 +222,30 @@ img{
     font-size: 24px;
   }
 
-  .glow{
-    text-shadow: var(--text-shadow-prison-number);
-    color: var(--prison-number-color);
-  }
 
-  .glow:hover{
-    color: var(--prison-number-color-hover);
-    cursor: pointer;
-  }
 
   .prisoner-number{
     font-family: 'Changa', sans-serif;
     font-size: 30px;
     margin: 10px 30px;
   }
+  
+  .prisoner-number.glow{
+    text-shadow: var(--text-shadow-prison-number);
+    color: var(--prison-number-color);
+  }
 
+  .prisoner-number.glow:hover{
+    color: var(--prison-number-color-hover);
+    cursor: pointer;
+  }
  .details-container{
    margin: auto;
    margin-top: 20px;
   border-radius: 20px;
   background-color: var(--background-dark);
   display: flex;
-  width: 85%;
+  width: 95%;
   max-width: 500px;
   color: var(--foreground-blue);
   background-image: url("./resources/photostop/door-tiles-45.png");
@@ -210,13 +260,11 @@ img{
 
  .right-container{
   flex: 0 1 60%;
-  display: flex;
   height: 100%;
   max-width: 60%;
-  align-items: flex-end;
   box-sizing: border-box;
 
-padding: 10px;
+  padding: 10px;
 
   border-left-width: 1px;
   border-right-width: 0px;
@@ -242,6 +290,10 @@ padding: 10px;
   font-size: var(--font-size-small);
 }
 
+.flex-end{
+  align-items: flex-end;
+}
+
  .photo{
   background-image: url("./resources/photostop/wireframe_blue.png");
   background-repeat: no-repeat;
@@ -249,9 +301,9 @@ padding: 10px;
   background-size: contain; 
   /* position: relative;
   /* height: 20vw; */
-  height: 100%;
-  flex:2;
-  margin: 0px 10px;
+  height: 150px;
+  width: 100%;
+  min-width: 50px;
 
   /* border-left-width: 2px;
   border-right-width: 2px;
@@ -267,47 +319,45 @@ padding: 10px;
   font-family: 'Changa', sans-serif;
   font-weight: bold;
   font-size: var(--font-size-small);
+  margin: 0px 2px;
+  min-width: 32px;
+  text-align: center;
  }
 
  .bar-graph{
    display: flex;
    align-items: flex-end;
-   height: 130px;
+   height: 115px;
  }
 
  .bar{
   background: var(--foreground-blue-faded);
-  margin: 5px;
   height: 100px;
-  width: 10px;
+  flex:1;
+  margin: 0px 3px;
  }
 
  .b1{
-   width: 10px;
    animation: bar1 1.4s alternate infinite;
    animation-timing-function: linear;
  }
 
  .b2{
-  width: 10px;
   animation: bar2 1s alternate infinite;
   animation-timing-function: linear;
 
 }
 
 .b3{
-  width: 10px;
   animation: bar3 1.8s alternate infinite;
 }
 
 .b4{
-  width: 10px;
   animation: bar4 0.8s alternate infinite;
   animation-timing-function: linear;
 }
 
 .b5{
-  width: 10px;
   animation: bar5 0.4s alternate infinite;
   animation-timing-function: linear;
 }
@@ -640,6 +690,110 @@ padding: 10px;
   100%{
     opacity: 100%;
   }
+}
+
+.heading{
+  margin: 0;
+  /* font-family: 'Righteous', cursive; */
+  font-family: 'Electrolize', sans-serif;
+  font-weight: bold;
+  /* font-family: 'Monoton', cursive; */
+  text-align: center;
+  color: var(--foreground-verylight-blue);
+}
+
+.heading.glow{
+  text-shadow:
+    0 0 7px var(--foreground-blue),
+    0 0 7px #000000,
+    0 0 10px var(--foreground-blue),
+    0 0 21px var(--foreground-blue),
+    0 0 42px var(--neon-border-color),
+    0 0 82px var(--neon-border-color),
+    0 0 92px var(--neon-border-color),
+    0 0 102px var(--neon-border-color),
+    0 0 151px var(--neon-border-color);
+    /* animation: title-flicker 5s infinite alternate;  */
+ 
+}
+
+.heading.glow.flicker{
+  animation: title-opacity-flicker 3s infinite alternate;
+}
+
+@keyframes title-flicker{
+  0%, 18.5%, 19.5%, 22.5%, 23.5%, 53.5%, 54.5%, 98.5%, 99.5%, 100%{
+    text-shadow:
+    0 0 7px var(--foreground-blue),
+    0 0 7px #000000,
+    0 0 10px var(--foreground-blue),
+    0 0 21px var(--foreground-blue),
+    0 0 42px var(--neon-border-color),
+    0 0 82px var(--neon-border-color),
+    0 0 92px var(--neon-border-color),
+    0 0 102px var(--neon-border-color),
+    0 0 151px var(--neon-border-color);
+  }
+  19%, 23%, 54%, 99% {       
+    text-shadow: none;
+  }
+}
+
+@keyframes title-opacity-flicker{
+  0%, 18%, 20%, 23%, 25%, 72%, 74%{
+    opacity: 1;
+  }
+  19%, 24%, 73%{       
+    opacity: 0.2;
+  }
+}
+
+
+
+.neonText {
+  color: #fff;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+}
+
+/* .icon{
+  height: 50px;
+  width: 50px;
+  border: 1px solid green;
+  color: green;
+
+  background: green;
+  background-image: url("./resources/angle-double-down-solid.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain; 
+
+} */
+
+.icon{
+  cursor: pointer;
+  color: var(--foreground-light-blue);
+  transition: all .1s ease-in-out;
+
+}
+.icon:hover{
+  transform: scale(1.2);
+}
+
+.link{
+  color: var(--foreground-light);
+  cursor: pointer;
+}
+
+.link:hover{
+  color: var(--foreground-blue)
 }
 
 

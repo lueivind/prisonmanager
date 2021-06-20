@@ -5,6 +5,12 @@ import Names from "../Names.json"
 import Prisoners from "./Prisoners"
 import PrisonerDetails from "./PrisonerDetails"
 
+// routing
+import { Link } from "react-router-dom"
+
+// fontawesome
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 export default class Prison extends Component {
     constructor(props) {
         super(props)
@@ -75,7 +81,7 @@ export default class Prison extends Component {
     render() {
         return (
             <div>
-                <h1 style={{ marginTop: "0.1em" }}>Prison</h1>
+                <div className="heading glow flicker fs-xxl">PRISON.GATE</div>
                 <hr className="hr-2" />
                 <Prisoners
                     prisoners={this.state.prisoners}
@@ -93,6 +99,16 @@ export default class Prison extends Component {
                     prisoners={this.state.prisoners}
                     selectedPrisoner={this.state.selectedPrisoner}
                 ></PrisonerDetails>
+
+                <div className="text-center" style={{ margin: "30px 0px" }}>
+                    <div className="heading glow fs-m">INTERROGATION</div>
+                    <Link to="/testing">
+                        <FontAwesomeIcon icon="angle-double-down" className="icon" size="2x" style={{ margin: "20px 0px" }} />
+                    </Link>
+                </div>
+
+
+
 
 
 

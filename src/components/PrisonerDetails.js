@@ -63,22 +63,29 @@ export default class PrisonerDetails extends Component {
 
                         </div>
                         <div className="right-container">
+                            <div className="flex flex-end" style={{ width: "100%" }}>
+                                {/* Prisoner Photo */}
+                                <div className="photo"></div>
+                                {/* Animating Bars and Numbers */}
+                                <div style={{ width: "100%", height: "80%" }}>
 
-                            <div className="photo"></div>
-                            <div>
+                                    <div className="bar-graph">
+                                        <div className="bar b1"></div>
+                                        <div className="bar b2"></div>
+                                        <div className="bar b5"></div>
+                                        <div className="bar b3"></div>
+                                        <div className="bar b4"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style={{ height: "20%" }}>
                                 <div style={{ display: "flex", justifyContent: "space-evenly" }}>
                                     <div className="numerics fg-blue-faded">{this.state.counter1}</div>
                                     <div className="numerics fg-light-faded">{this.state.counter2}</div>
                                     <div className="numerics fg-blue-faded">{this.state.counter3}</div>
                                 </div>
 
-                                <div className="bar-graph">
-                                    <div className="bar b1"></div>
-                                    <div className="bar b2"></div>
-                                    <div className="bar b5"></div>
-                                    <div className="bar b3"></div>
-                                    <div className="bar b4"></div>
-                                </div>
                             </div>
 
 
