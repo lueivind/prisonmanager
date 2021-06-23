@@ -17,13 +17,13 @@ function App() {
   return (
     <Router>
       <div className="container">
-        <div style={{ color: "#b0b0b0", fontSize: "0.9em", marginLeft: "0.1em" }}>version. 00-005-Test.01</div>
+        <div style={{ color: "#b0b0b0", fontSize: "0.9em", marginLeft: "0.1em" }}>version. 00-006</div>
 
         <Switch>
           {/* Home */}
           <Route exact path="/" component={Prison}></Route>
           {/* Testing */}
-          <Route exact path="/testing" component={Testing}></Route>
+          {/* <Route exact path="/testing" component={Testing}></Route> */}
           {/* 404, Not Found */}
           <Route component={NotFound}></Route>
         </Switch>

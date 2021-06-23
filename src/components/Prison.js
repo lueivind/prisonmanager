@@ -87,25 +87,19 @@ export default class Prison extends Component {
                     prisoners={this.state.prisoners}
                     onSelectionChanged={this.selectionChanged.bind(this)}></Prisoners>
                 <hr className="hr-2" />
-                {/* <div>
-                    <hr className="marker m1 center"></hr>
-                    <hr className="marker m2 center"></hr>
-                    <hr className="marker m3 center"></hr>
-                    <hr className="marker m4 center"></hr>
-                    <hr className="marker m5 center"></hr>
-                </div> */}
 
                 <PrisonerDetails
                     prisoners={this.state.prisoners}
                     selectedPrisoner={this.state.selectedPrisoner}
                 ></PrisonerDetails>
 
-                <div className="text-center" style={{ margin: "30px 0px" }}>
+                {/* To Interrogation */}
+                {/* <div className="text-center" style={{ margin: "30px 0px" }}>
                     <div className="heading glow fs-m">INTERROGATION</div>
                     <Link to="/testing">
                         <FontAwesomeIcon icon="angle-double-down" className="icon" size="2x" style={{ margin: "20px 0px" }} />
                     </Link>
-                </div>
+                </div> */}
 
 
 
