@@ -134,45 +134,25 @@ img{
     width: 100%;
 }
 
+/* ===================== 
+        PRISONER
+======================== */ 
+
 .prison-door {
 
   margin: 1em 0.5em 0em 0.5em;
   border-radius: 20px 20px 0px 0px;
-      background-color: var(--background-dark);
+    background-color: var(--background-dark);
     display: flex;
-    /* justify-content: space-between; */
     height: 270px;
     width: 13em;
 
     background-image: url("./resources/photostop/door-tiles-45.png");
 
-    /* Major performance reduction -->  */
-    /* box-shadow: var(--box-shadow-blue); */
-
     --text-shadow-prison-number: none;
     --prison-number-color: var(--foreground-blue-faded);
     --prison-number-color-hover: var(--foreground-blue);
   }
-
-  .prison-door-test {
-
-    margin: 1em 0.5em 0em 0.5em;
-    border-radius: 20px 20px 0px 0px;
-        background-color: var(--background-dark);
-      display: flex;
-      /* justify-content: space-between; */
-      height: 270px;
-      width: 13em;
-  
-      background-image: url("./resources/photostop/door-tiles-45.png");
-  
-      /* Major performance reduction -->  */
-      /* box-shadow: var(--box-shadow-blue); */
-  
-      --text-shadow-prison-number: none;
-      --prison-number-color: var(--foreground-blue-faded);
-      --prison-number-color-hover: var(--foreground-blue);
-    }
 
   .prison-door > div {
     flex: 1;
@@ -194,42 +174,41 @@ img{
     box-shadow: var(--box-shadow-blue-selected);
   }
 
-  .prison-door-test.is-selected  {
-    /* --text-shadow-prison-number: 
-      0px 0px 5px #006debff,
-      0px 0px 10px #006debff,
-      0px 0px 15px #006debff,
-      0px 0px 25px #006debff,
-      0px 0px 35px #006debff,
-      0px 0px 50px #006debff,
-      0px 0px 70px #006debff;
-    --prison-number-color: rgb(218, 235, 255);
-    --prison-number-color-hover: rgb(218, 235, 255);; */
-
+  .prison-door.test-glow{
     box-shadow: var(--box-shadow-blue-selected);
   }
 
+  .prisoner-number.test-glow{
+    --text-shadow-prison-number: 
+    0px 0px 5px #006debff,
+    0px 0px 10px #006debff,
+    0px 0px 15px #006debff,
+    0px 0px 25px #006debff,
+    0px 0px 35px #006debff,
+    0px 0px 50px #006debff,
+    0px 0px 70px #006debff;
+    text-shadow: var(--text-shadow-prison-number);
+    color: rgb(218, 235, 255);
+  }
+  
   .prison-door-inner-border{
     margin: 10px;
     padding: 10px;
     border-radius: 10px;
     box-shadow: var(--box-shadow-blue);
     width: 100%;
-    
   }
 
   .prisoner-name{
     font-size: 24px;
   }
 
-
-
   .prisoner-number{
     font-family: 'Changa', sans-serif;
     font-size: 30px;
     margin: 10px 30px;
   }
-  
+
   .prisoner-number.glow{
     text-shadow: var(--text-shadow-prison-number);
     color: var(--prison-number-color);
@@ -239,6 +218,26 @@ img{
     color: var(--prison-number-color-hover);
     cursor: pointer;
   }
+
+  .test-container{
+    width: 13em;
+    position: absolute;
+    animation: translation 1s infinite alternate;
+  }
+
+  @keyframes translation {
+    0%{
+      left: 0;
+    }
+    100%{
+      left: calc(100% - 14em);
+    }
+  }
+
+/* ===================== 
+        PRISONER DETAILS
+======================== */ 
+
  .details-container{
    margin: auto;
    margin-top: 20px;
@@ -474,8 +473,6 @@ img{
     background-position: -200% 0%;
   }
 }
-
-
 
 .marker{
   border: none;
